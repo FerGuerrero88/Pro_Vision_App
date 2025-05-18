@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Card de selección de dispositivo Bluetooth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona un dispositivo Bluetooth"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar Dispositivos"
+                android:backgroundTint="#0F5861"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/selectedDeviceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispositivo: ninguno"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnConectar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#4CAF50"
+                    android:text="    Conectar    " />
+
+                <Button
+                    android:id="@+id/btnDesconectar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#D40000"
+                    android:text="Desconectar"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deviceLi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+        <!-- Card de Gafas Inteligentes -->
+        <LinearLayout
+            android:id="@+id/cardDispositivoGafas"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgDispositivoGafas"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:src="@drawable/gafas"
+                android:tag="apagado"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/selectedDeviceGafas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conectado a: ninguno"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+        <!-- Card de texto recibido por Bluetooth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Texto recibido por Bluetooth:"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/bluetoothTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(esperando datos...)"
+                android:textColor="#000000"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:textSize="15sp"
+                android:elevation="2dp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnHablarTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hablar Texto"
+                android:backgroundTint="#00796B"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

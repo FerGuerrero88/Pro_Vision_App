@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Cabecera de perfil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_dos"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/gafas_perfil"
+            android:background="@drawable/circle_gray"
+            android:padding="4dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola, Usuario"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switchTTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="           Leer automaticamente"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_marginTop="16dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+    <!-- Botón principal de "Seleccionar act" -->
+    <Button
+        android:id="@+id/btnSelectAct"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#FFC107"
+        android:text="Selecciona Actividad"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <!-- Botones de actividades (solo visibles cuando se presiona "Seleccionar act") -->
+    <Button
+        android:id="@+id/btnDeviceActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coneccion a Dispositivo"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/icon_gray" />
+
+    <Button
+        android:id="@+id/btnTraduccionActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traductor de Texto"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnNewDeviceActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Dispositivo"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnDeviceManagementActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Taduccir Desde Historial"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+</LinearLayout>

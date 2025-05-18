@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card IP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa la IP de la cámara:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etCameraIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="http://192.168.1.100"
+                android:inputType="textUri"
+                android:backgroundTint="#B0BEC5"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btnGuardarIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conectar a IP"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF" />
+
+            <Switch
+                android:id="@+id/switchCamara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="               Cambiar a camara del celular"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginTop="16dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        </LinearLayout>
+
+        <!-- Card Idiomas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona idioma de traducción:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnEsp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Español"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF"/>
+
+                    <Button
+                        android:id="@+id/btnIngles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inglés"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF"/>
+
+                    <Button
+                        android:id="@+id/btnFrances"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Francés"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF"/>
+
+                    <Button
+                        android:id="@+id/btnAleman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alemán"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Card Cámara y Traducción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp"
+            tools:ignore="WebViewLayout">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnCapturar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capturar y Traducir"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnBorrarImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp"
+                android:text="Borrar Captura" />
+
+            <TextView
+                android:id="@+id/translatedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Traducción aparecerá aquí"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnIniciarTraduccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Traducción"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnGuardarTraduccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Traduccion"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/btnPararTraduccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detener Traducción"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnLeerTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leer Traducción en Voz"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

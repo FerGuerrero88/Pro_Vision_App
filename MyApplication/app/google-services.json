@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "221577120000",
+    "firebase_url": "https://sistemas-programables-37c92-default-rtdb.firebaseio.com",
+    "project_id": "sistemas-programables-37c92",
+    "storage_bucket": "sistemas-programables-37c92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221577120000:android:cfbb9053e4dfbdddb2cbe5",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtA2biB0LvOljICnbwmmMc6Bm17f9k8S0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

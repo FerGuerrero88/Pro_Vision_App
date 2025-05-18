@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcomeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+    <!-- Logo con animación compartida -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/gafas"
+        android:contentDescription="@drawable/ic_launcher_foreground"
+        android:elevation="8dp"
+        android:layout_marginBottom="24dp"
+        android:transitionName="logoTransition"
+        android:layout_gravity="center"/>
+
+    <!-- Texto de bienvenida con estilo más atractivo -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#3A3A3A"
+    android:layout_marginBottom="24dp"
+    android:gravity="center"/>
+
+    <!-- Botón con un toque moderno -->
+    <Button
+        android:id="@+id/btnWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar a la Aplicación"
+        android:textSize="16sp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+    android:padding="16dp" />
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card para mostrar/ocultar lista de favoritos -->
+        <LinearLayout
+            android:id="@+id/cardToggleFavoritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewFavoritoSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorito seleccionado: ninguno"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnToggleLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar lista"
+                android:backgroundTint="#0F5861"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Card con la lista de favoritos (oculta inicialmente) -->
+        <LinearLayout
+            android:id="@+id/cardListaFavoritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_dos"
+            android:padding="8dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFavoritos"
+                android:layout_width="match_parent"
+                android:background="@drawable/card_background_tres"
+                android:textColor="#000000"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+
+        <!-- Card con botones de idioma -->
+        <LinearLayout
+            android:id="@+id/cardIdiomas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewIdiomaActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idioma actual: Español"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnEspañol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Español"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnIngles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inglés"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnFrances"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Francés"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnAleman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alemán"
+                        android:backgroundTint="#0F5861"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Card grande y blanco para el texto traducido -->
+        <LinearLayout
+            android:id="@+id/cardTextoTraducido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:id="@+id/textViewTextoTraducido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aquí aparecerá la traducción"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

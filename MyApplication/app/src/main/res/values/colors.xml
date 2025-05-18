@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+        <!-- Fondo principal claro -->
+        <color name="background_light">#F5F5F5</color>
+
+        <!-- Fondo para elementos resaltados como cajas de texto -->
+        <color name="background_highlight">#FFFFFF</color>
+
+        <!-- Azul para botones y elementos principales -->
+        <color name="accent_blue">#2196F3</color>
+
+        <!-- Texto normal (negro) -->
+        <color name="text_black">#212121</color>
+
+        <!-- Texto de ayuda (hint) -->
+        <color name="text_hint">#9E9E9E</color>
+
+        <!-- Texto claro sobre fondo oscuro -->
+        <color name="button_text_inverted">#FFFFFF</color>
+
+        <!-- Gris para íconos -->
+        <color name="icon_gray">#757575</color>
+    <!-- Otro color alternativo si quieres usarlo más adelante -->
+        <color name="accent_orange">#FF9800</color>
+
+    <color name="hint_gray">#808080</color> <!-- Gris medio -->
+    <color name="colorPrimary">#6200EE</color> <!-- Violeta -->
+    <color name="colorAccent">#03DAC5</color> <!-- Verde claro -->
+
+</resources>
